@@ -1,0 +1,371 @@
+/* CSS Document */
+
+#ajax_tooltipObj{
+	z-index:1000000;
+	text-align:left;
+}
+#ajax_tooltipObj div{
+	position:relative;
+}
+
+/* If you don't want the arrow - Just set the width of this div to 1 or something like that and drop the background selectors from the CSS below */
+
+#ajax_tooltipObj .ajax_tooltip_arrow{	/* Left div for the small arrow */
+	width:20px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-repeat:no-repeat;
+	background-position:center left;
+	z-index:1000005;
+	height:60px;
+}
+
+#ajax_tooltipObj .ajax_tooltip_content{
+	/*border:1px solid #317082;	 /*Border width */
+	left:10px;	/* Same as border thickness */
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	width:290px;	/* Width of tooltip content */
+	height:350px;	/* Height of tooltip content */
+	/*background-color: #FF9900;	/* Background color */
+	padding:5px;	/* Space between border and content */
+	font-size:0.8em;	/* Font size of content */
+	overflow:auto;	/* Hide overflow content */
+	z-index:1000001;
+	color: #000000;
+}
+img, #bg1 { behavior: url(info/iepngfix/iepngfix.htc) }
+img, #bg2 { behavior: url(info/iepngfix/iepngfix.htc) }
+img, #bg3 { behavior: url(info/iepngfix/iepngfix.htc) }
+#Layer1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+}
+#Layer2 {
+	position:absolute;
+	width:91px;
+	height:115px;
+	z-index:1;
+	top: 15px;
+	left: 7px;
+}
+#Layer3 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+}
+
+
+body
+{
+  background-color: #D8D8D8;
+  margin:0;
+  padding:0px;
+}
+body,TD,P
+{
+  color: #393939;
+  font-family: arial, sans-serif;
+  font-size: 11px;
+}
+.mainContainer{
+background-color:#FFFFFF; 
+}
+.headerfooterLinks{
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+a.headerfooterLinks:link {
+color: #FFFFFF;
+text-decoration: none;
+}
+a.headerfooterLinks:visited {
+color: #FFFFFF;
+text-decoration: none;
+}
+a.headerfooterLinks:hover {
+color: blue;
+text-decoration: underline;
+}
+#overlay
+{    
+	background-image: url(../../images/overlay.png);     
+	position: absolute;     
+	top: 0px;     
+	left: 0px;     
+	z-index: 90;     
+	width: 100%;     
+	height: 100%; 
+} 
+#overlay_sugg
+{    
+	background-image: url(../../images/overlay.png);     
+	position: absolute;     
+	top: 0px;     
+	left: 0px;     
+	z-index: 90;     
+	width: 100%;     
+	height: 100%; 
+} 
+
+#box
+{     
+	width:250px;     
+	background-color:#FFFFFF;  
+	padding:10px;     
+	border:2px solid #666666;  
+} 
+#box_sugg
+{     
+	width:450px;     
+	background-color:#FFFFFF;  
+	padding:10px;     
+	border:2px solid #666666; 
+} 
+
+#close
+{     
+	position:absolute;     
+	top:-5px;     
+	right:-5px;     
+	cursor:pointer; 
+} 
+.loginfont {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+.loginlink {
+	color:#FFFFFF;
+}
+.loginlink:hover {
+	color: #000000;
+}
+DIV.clTopMenu{
+	font-size:14px; 
+	font-weight:bold;
+	position:absolute; 
+	visibility:hidden; 
+	z-index:31; 
+	float:right;
+}
+DIV.clTopMenuBottom{
+	position:absolute;  
+	background-color:#E8E8E8; 
+	z-index:2
+}
+DIV.clTopMenuText{
+	position:absolute; 
+	left:0px; 
+	top:25px; 
+	font-family:arial,helvetica; font-size:11px; 
+	background-color:#E8E8E8; 
+	z-index:1
+} 
+#divTopMenuText0 ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+} 
+#divTopMenuText0 li a
+{
+	height: 2em;
+	line-height: 2em;
+	width: 12em;
+	display: block;
+	border: 0.1em solid #cccccc;
+	color: #0d2474;
+	text-decoration: none;
+	text-align: center;
+} 
+#divTopMenuText0 li a:hover
+{
+	background-color:#E8E8E8; text-decoration:underline;
+} 
+.contentBox{
+		visibility:hidden;
+		overflow:hidden;
+		position:absolute;
+		width:141px;
+		height:130px;
+		z-index:1;
+		background-color: #F3F3F3;
+		top:20px;
+		left:5px;
+		border-width:1px;
+		border-style: solid;
+		border-color: #FF0000;
+	}
+.menu_content{
+		position:relative;
+		width:100%;
+	}
+#submenu_main {
+	position:relative;
+}
+#submenu {
+	position:absolute;
+	width:141px;
+	z-index:1;
+	top:20px;
+}
+#submenu ul { /* remove bullets and list indents */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left; /* cure IE5.x "whitespace in lists" problem */
+	width: 100%;
+
+}
+#submenu a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:11px;
+	display: block;
+	padding: 2px;
+	color: #003366;
+	text-decoration: underline;
+	height: 1%; /* make links honour display: block; properly */
+
+}
+#submenu a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #FF0000;
+}
+.contentBox1{
+		visibility:hidden;
+		overflow:hidden;
+		position:absolute;
+		width:230px;
+		height:50px;
+		top:15px;
+		right:-5px;
+		z-index:1;
+		background-color: #ffffff;  /* the background          */
+   		filter:alpha(opacity=50);   /* Internet Explorer       */
+   		-moz-opacity:0.5;           /* Mozilla 1.6 and below   */
+   		opacity: 0.8;               /* newer Mozilla and CSS-3 */
+		color:#000000;
+		border:1px;
+		border-color:#999999;
+		border-style:solid;
+	}
+.login_content{
+		position:relative;
+		width:100%;
+	}
+#submenu_login {
+	position:relative;
+}
+
+.searchbox {
+border: #999999 1px solid; 
+margin:0px 0px 7px 0px; 
+padding:1px; 
+padding:1px;  
+height:16px; 
+background-image:url(../../images/imagesbeta/searchbox_back.gif); 
+background-repeat:repeat-x; 
+width:333px;
+font-size:14px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+}
+.searchbutton {
+vertical-align:bottom;
+}
+.headerfooterLinks{
+font: Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+}
+a.headerfooterLinks:link {
+color: #FFFFFF;
+text-decoration: none;
+}
+
+a.headerfooterLinks:visited {
+color: #FFFFFF;
+text-decoration: none;
+}
+a.headerfooterLinks:hover {
+color: blue;
+text-decoration: underline;
+}
+.posmaglink {
+   margin-right:55px;
+}
+
+.regbox {
+    border:1px solid #BBBBBB;
+	background-color:#F8F8F8;
+	font-size:12px;
+}
+
+.regbox:hover {
+	background: #FFFFFF;
+}
+	
+.regbox:focus {
+	background: #FFFFFF;
+	border: solid 1px #000000;
+}
+
+.submit_butt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color: #003366;
+	text-decoration: none;
+}
+
+a {
+	color:#3366FF;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+texthead {
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#333333;
+}
+
+texthead a:link {
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#333333;
+}
+
+texthead a:visited {
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#333333;
+}
+
+texthead a:active {
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#333333;
+}
+
+texthead a:hover {
+font: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#FF0000;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Categories: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'main' %>
+<style>
+categorytext { 
+    font-family:Helvetica, Arial, Verdana, sans-serif;
+	font-weight:Bold;
+	font-size:12px;
+	color:#333333;
+	text-decoration: none;
+}
+a.categorytext { 
+    font-family:Helvetica, Arial, Verdana, sans-serif;     
+	font-size:12px;
+	font-weight:Bold;
+	color:#333333;
+	text-decoration: none;
+}
+a.categorytext:link {
+	font-weight:Bold;
+	color:#333333;
+	text-decoration: none;
+}
+a.categorytext:visited {
+	font-weight:Bold;
+	color:#333333;
+	text-decoration: none;
+}
+a.categorytext:active {
+	font-weight:Bold;
+	color:#333333;
+	text-decoration: none;
+}
+a.categorytext:hover {
+	font-weight:Bold;
+	color:#0099FF;
+	text-decoration: none;
+}
+</style>
+
+<script language="javascript">
+function setFocus()
+{
+  document.queryform.q.focus();
+}
+
+//---Empty Check
+function ValidateSearch(){
+  if(document.queryform.q.value!=""){
+    document.queryform.submit();
+  }else{
+    alert("Search String Should not be Empty");
+    document.queryform.q.focus();
+	return false;
+  }
+}
+</script>
+
+  
+</head>
+<body onload="setFocus()">
+
+<p style="color: green"><%= notice %></p>
+
+<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" border="0">
+<tr>
+  <td>  
+             <div style="background-image:url(images/imagesbeta/top_back.jpg); background-repeat:repeat-x;height:30px;">
+                <div style="float:left; margin-top:6px; margin-left:60px;">
+                <table cellpadding="2" cellspacing="0">
+                  <tr valign="top">
+					<td align="center"><a href="index.php" class="headerfooterLinks">Home</a></td>
+                    <td>&nbsp;&nbsp;<img src="images/new_screens/menubar.jpg">&nbsp;&nbsp;</td>
+
+						<td align="center"><a href="about.php" class="headerfooterLinks">Company</a></td>
+					<td>&nbsp;&nbsp;<img src="images/new_screens/menubar.jpg">&nbsp;&nbsp;</td>
+                    <td align="center"><a href="ad_select.php" class="headerfooterLinks">Advertise</a></td>
+				</tr>
+			  </table>
+			</div>
+			</td>
+</tr>
+<tr>
+   <td height="50">&nbsp;</td>
+</tr>
+<tr>
+   <td align="center"><img src="images/imagesbeta/plutozlogo.jpg" width="329" height="114"/></td>
+</tr>
+<tr>
+   <td height="50">&nbsp;</td>
+</tr>
+</table>        
+<table width="100%" height="250" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+	<tr>
+
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0" align="center">
+			<form action="search.php" method="GET" name="queryform"  onSubmit='return ValidateSearch();' autocomplete="off">	
+				<tr valign="top">
+					<td><img src="images/new_screens/searchleft.jpg" width='41' height='74'/></td>
+					<td align="center">        
+						<table cellpadding="0" cellspacing="0" border="0" width="486" height="74" background="images/new_screens/searchcenter.jpg">
+							 <tr valign="top">
+								<td><img src="images/new_screens/index_searchbox_left.jpg"  border="0" usemap="#Map" width='71' height='51'> <map name="Map" id="Map"><area shape="rect" coords="25,16,71,44" onclick="ValidateSearch();return false;"  href="" /></map></a></td>
+								<!-- td><a href="#"><img src="images/new_screens/index_searchbox_left.jpg" onClick="ValidateSearch();return true;" width="71" border="0" height="51"/></a></td -->
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" background="images/new_screens/index_searchbox_section.jpg" width="317" height="51" align="center" >
+										<tr><td><img src="images/imagesbeta/spacer.gif" width="1" height="11"></td></tr>
+										<tr><td><input type="hidden" name="newsearch" value="TRUE"/></td></tr>
+										<tr><td><input name="q" id='q' maxlength="45" type="text" class="searchbox" /></td></tr>										
+									</table>
+								</td>
+								<td><img src="images/new_screens/index_searchbox_button.jpg" border="0" usemap="#search" width='98' height='51'> <map name="search" id="search"><area shape="rect" coords="1,16,98,44" onclick="ValidateSearch();return false;"  href="" /></map></a></td>
+								<!-- td>
+									<input type="image" src="images/new_screens/index_searchbox_button.jpg" width="98" height="51"/>
+								</td -->
+							 </tr>		
+						</table>						 
+				   </td>
+				   <td><img src="images/new_screens/searchright.jpg" width='41' height='74'/></td>
+				</tr>
+			
+			</form>
+
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+	   <td><br /><br />&nbsp;</td>
+	</tr>
+<tr>
+   <td id='category_tab' align='center'''><!-- Category Container -->
+
+	<%= yield %>
+
+   </td><!-- Category List -->
+</tr>
+<tr>
+   <td><br /><br />&nbsp;</td>
+</tr>
+
+<tr><td><img  src='images/spacer.gif' id='img5'  width="1" height="32"></td></tr>
+</table>
+
+
+
+
+<div id="catBox" class="catpopupclass"></div>
+          <div style="background-image:url(images/imagesbeta/footer_back.jpg); background-repeat:repeat-x; height:35px;">
+              
+                <div style="font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFF; padding-top:10px;" align="center">
+                  &copy; 2009, Plutoz.  All Rights Reserved. <a href='policies.php' style="font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFF; padding-top:10px;">Privacy Policy</a> | <a href='policies.php#disclaimer' style="font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFF; padding-top:10px;">Disclaimer</a> 
+                </div>		
+
+
+          </div>
+
+	
+</div>
+
+</body>
+</html>
