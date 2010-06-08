@@ -80,4 +80,9 @@ class CategoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # custom action to simulate plutoz homepage
+  def plutozhome
+    @categories = Category.all
+  end
 end
