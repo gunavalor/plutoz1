@@ -83,6 +83,10 @@ class CategoriesController < ApplicationController
   
   # custom action to simulate plutoz homepage
   def plutozhome
-    @categories = Category.all
+    categories = Category.all
+    @catlist = Array.new
+    categories.each do |category| 
+      @catlist.push(category.catname)
+    end
   end
 end

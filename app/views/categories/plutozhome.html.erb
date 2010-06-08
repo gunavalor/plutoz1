@@ -9,9 +9,9 @@
 										<tbody>
 				
 <% colcount = 1 %>
-<% @categories.each do |category| %>
+<% @catlist.each do |catname| %>
   
-     <tr><td class="categorytext" align="left"><a href="#" class="categorytext" title="<%=h category.catname %>"><%=h category.catname %></a></td></tr>
+     <tr><td class="categorytext" align="left"><a href="#" class="categorytext" title="<%=h catname %>"><%=h catname %></a></td></tr>
 					
      <% colcount += 1 %>
      
